@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      // Using spread operator
+      let product_one = {
+        name: "Bangles",
+        source_product_id: "785412536974"
+      };
+      let modified_data = {
+        container_id: "415699874525",
+        description: "this is a description to get you started."
+      };
+      let merge = {
+        ...product_one,
+        ...modified_data
+      };
+      console.log(merge);
+      // Using assign Method
+      console.log("after spread operator Merge with assign Method");
+      let person = {
+        firstName: "Saurabh",
+        lastName: "Gupta",
+        age: 19,
+        ssn: "+91-9580459214"
+      };
+
+      let job = {
+        jobTitle: "Frontend Developer",
+        country: "INDIA"
+      };
+
+      let employee = Object.assign(person, job);
+      console.log(employee);
+
+      console.log("Using for loop");
+
+      for (const property in merge) {
+        console.log(`${property}: ${merge[property]}`);
+      }
+      console.log("Through with forEach()");
+
+      // Object.keys()
+      console.log("Using Object.keys()");
+      Object.keys(employee).forEach((key) => {
+        console.log(key, employee[key]);
+      });
+
+      // Object.values()
+      console.log("Using Object.values()");
+      Object.values(merge).forEach((val) => {
+        console.log(val);
+      });
+
+      //Object.entries()
+      console.log("Using Object.entries()");
+      Object.entries(employee).forEach((entry) => {
+        const [key, value] = entry;
+        console.log(key, value);
+      });
+    </script>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1><center>Cedcommerce Traning</center></h1>
+  </body>
+</html>
