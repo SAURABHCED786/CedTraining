@@ -107,21 +107,25 @@ function tellFuture2() {
     var name = document.getElementById("nameId").value;
     var a_arr = ["Yes.. Your Future is Bright", "Yes.! Why Not..", "You Need To Start Hard Work", "Ek Dost Aapke Liye Helpful Hoga", "You Are Already Successful Person", "Not Sure..!", "You Need To Always Alert in Daily Life.", "If You Unleash samart hobbies In You, Maybe."];
 
-    if (selctQues.match("If my future is bright ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[0];
-    } else if (selctQues.match("Will I get SUKOON in life anytime soon ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[1];
-    } else if (selctQues.match("Will I get married ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[2];
-    } else if (selctQues.match("Will I get a Car in Future ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[3];
-    } else if (selctQues.match("Will I get Success in my Life?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[4];
-    } else if (selctQues.match("Will I get promoted ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[5];
-    } else if (selctQues.match("If my foe lies within my circle ?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[6];
-    } else if (selctQues.match("Will i get Girlfrend..! in Future?")) {
-        document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[7];
+    if (name == '') {
+        alert('First Enter Your Name.');
+    } else {
+        if (selctQues.match("If my future is bright ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[0];
+        } else if (selctQues.match("Will I get SUKOON in life anytime soon ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[1];
+        } else if (selctQues.match("Will I get married ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[2];
+        } else if (selctQues.match("Will I get a Car in Future ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[3];
+        } else if (selctQues.match("Will I get Success in my Life?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[4];
+        } else if (selctQues.match("Will I get promoted ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[5];
+        } else if (selctQues.match("If my foe lies within my circle ?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[6];
+        } else if (selctQues.match("Will i get Girlfrend..! in Future?")) {
+            document.getElementById("resultId").innerHTML = "Hello " + name + " You have asked " + selctQues + " well.. " + a_arr[7];
+        }
     }
 }

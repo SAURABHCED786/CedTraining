@@ -119,9 +119,9 @@
             var fval = false;
             function validation() {
                 var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-                let x = document.forms["myForm"][("animal", "another", "onemore", "adj", "verb", "num", "motivation")].value;
+                let x = document.forms["myForm"][("animal", "another", "onemore", "adj", "verb", "num")].value;
                 if (x == "" || x.indexOf(' ') >= 0 || x.match(format)) {
-                    alert("Name must be filled out");
+                    alert("Must Be Fill Out All Blank Fields.");
                      document.getElementsByName("animal")[0].style.border="1px solid red";
                      document.getElementsByName("another")[0].style.border="1px solid red";
                      document.getElementsByName("onemore")[0].style.border="1px solid red";
