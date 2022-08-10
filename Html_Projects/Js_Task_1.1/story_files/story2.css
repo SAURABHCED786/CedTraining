@@ -1,0 +1,41 @@
+.bg {
+    position: relative;
+    background-color: #FFC30B;
+    height: 730px;
+    padding-top: 100px;
+}
+
+.card2 {
+    background-color: lightyellow;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    height: auto;
+}
+
+.card1 {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    height: auto;
+    align-items: center;
+}
+
+.card1 img {
+    width: 150px;
+    height: 100px;
+}
+
+.subcard {
+    overflow-y: scroll;
+    padding: 20px;
+    height: 400px;
+    padding-bottom: 30px;
+}

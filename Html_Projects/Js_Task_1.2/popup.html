@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+ /* Pop-Up */
+.model_popup {
+    transition: display 2s;
+    transition-delay: 1s;
+    display: none;
+    position: fixed;
+    z-index: 8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(74 74 74 / 37%);
+  }
+
+  .popup_content {
+    height: 58%;
+    margin: 69px auto;
+    margin-top: 9.4em;
+    border: 1px solid #999;
+    width: 28%;
+    border-radius: 20px;
+  }
+
+  .popup {
+    padding: 22px;
+    height: 90%;
+    margin: 18px;
+    box-shadow: 0 1px 7px #f5f5f5;
+    background: #eeeeee4f;
+  }
+
+  a.close {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #00000057;
+    font-size: 35px;
+    text-decoration: none;
+    margin-top: -33px;
+    margin-left: 4.2em;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+
+  a.close:hover {
+    transform: rotate(180deg);
+  }
+
+  .model_popup h4 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px black;
+    font-family: nosifer;
+}
+.model_popup p {
+    text-align: start;
+    margin-top: 19px;
+    line-height: 14px;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px black;
+    font-family: sans-serif;
+}
+  </style>
+</head>
+
+<body onload="showPopup()" >
+
+  <h2>JavaScript HTML Events</h2>
+  Enter your name: <input type="text" id="fname" onkeypress="upperCase()">
+  <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+  <button onclick="model_popup();">call popup</button>
+
+  <div class="model_popup">
+    <div class="popup_content">
+      <div class="popup">
+        <a onclick="closePopup();" class="close">&times;</a>
+        <h4>Enter Your Question Like This:</h4>
+        <p>Any friend in my life?</p>
+        <p>Who is My Enemy?</p>
+        <p>Mera Dost Kaisa Hai?</p>
+        <p>Who Loves Me?</p>
+        <p>Who I Am?</p>
+        <p>Who Are You?</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function model_popup() {
+      let modelPopup = document.getElementsByClassName("model_popup")[0];
+      modelPopup.style.display = "block";
+    }
+    function closePopup() {
+      let modelPopup = document.getElementsByClassName("model_popup")[0];
+      modelPopup.style.display = "none";
+    }
+    function upperCase() {
+      const x = document.getElementById("fname");
+      x.value = x.value.toUpperCase();
+    }
+    function showPopup() {
+      setTimeout(function () { model_popup() }, 4000);
+
+      setTimeout(function () { closePopup() }, 10000);
+    }
+  </script>
+
+</body>
+
+</html>
