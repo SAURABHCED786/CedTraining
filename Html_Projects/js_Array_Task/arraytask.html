@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var arr = [3, 7, 0, -3, 2];
+        var temp = [];
+        //output  [0,-1,2,3,-1]
+        document.write("Input: ");
+        for (var i = 0; i < arr.length; i++) {
+
+            document.write(" " + arr[i]);
+
+            for (var j = 0; j < arr.length; j++) {
+                if (arr[j] === i) {
+                    temp[i] = arr[j];
+                }
+            }
+            if (temp[i] == undefined) {
+                temp[i] = -1
+            }
+        }
+
+        document.write("<br>");
+
+        document.write("Output: ");
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = temp[i];
+            document.write(" " + arr[i]);
+
+        }
+    </script>
+
+</body>
+
+</html>
